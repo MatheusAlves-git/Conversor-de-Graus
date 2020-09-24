@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+        body{
+            background-color: rgb(62, 134, 228);
+        }
+
+        .txt1{
+            color: rgb(235, 235, 235);
+            font-family: cursive;
+            position: absolute;
+            white-space: nowrap;
+            top: -25%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        button{
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+
+        .principal{
+            border-radius: 10px;
+            width: 600px;
+            padding-bottom: 315px;
+            background-color: rgb(235, 235, 235);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1{
+            font-family: cursive;
+            position: absolute;
+            white-space: nowrap;
+            top: 25%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        .seno{
+            background-color: rgb(212, 192, 4);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-300%, -10%);
+        }
+
+        .cosseno{
+            background-color: rgb(5, 163, 211);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -10%);
+        }
+
+        .tangente{
+            background-color: rgb(226, 62, 62);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(135%, -10%);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <h1 class="txt1">Conversor de Graus</h1>
+        <h1>Escolha uma das opções</h1>
+        <form action="sen">
+            <button class="seno" type="submit">Seno</button>
+        </form>
+        <form action="cos">
+            <button class="cosseno" type="submit">Cosseno</button>
+        </form>
+        <form action="tan">
+            <button class="tangente" type="submit">Tangente</button>
+        </form>
+    </div>
+</body>
+</html>

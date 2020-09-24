@@ -1,0 +1,110 @@
+<head>
+    <title>TANGENTE</title>
+    <style>
+        body{
+            background-color:rgb(226, 62, 62);
+        }
+
+        .txt1{
+            color: rgb(235, 235, 235);
+            font-family: cursive;
+            position: absolute;
+            white-space: nowrap;
+            top: -25%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        button{
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+
+        .principal{
+            border-radius: 10px;
+            width: 600px;
+            padding-bottom: 300px;
+            background-color: rgb(235, 235, 235);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .entrada{
+            border-radius: 5px;
+            padding: 10px 15px;
+            position: absolute;
+            top: 50%;
+            left: 44%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .calcular{
+            background-color: rgb(5, 211, 74);
+            position: absolute;
+            top: 50%;
+            left: 67%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .voltar{
+            background-color: rgb(211, 5, 5);
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .resultado{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1{
+            font-family: cursive;
+            position: absolute;
+            white-space: nowrap;
+            top: 25%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        h2{
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <h1 class="txt1">Conversor de Graus</h1>
+        <form method="POST" action="tangente">
+            {% csrf_token %}
+            <h1>Tangente </h1>
+            <input class="entrada" placeholder="Insira um valor em graus..." type="number" id="n1" name="n1">
+            <button class="calcular" type="submit">Calcular</button>
+            
+            <div class="resultado">
+                {% block content %}
+                    <h2>Resultado: {{ calcular }}</h2>
+                {% endblock %}
+            </div>
+        </form>
+        <form action=".">
+            <button class="voltar" type="submit">Voltar</button>
+        </form>
+    </div>
+</body>
